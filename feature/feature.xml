@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.carrotgarden.eclipse.space.feature"
+      label="Space Master"
+      version="1.1.0.qualifier"
+      provider-name="Carrot Garden">
+
+   <description>
+      com.carrotgarden.eclipse.space.feature
+   </description>
+
+   <copyright url="http://www.apache.org/licenses/">
+      Carrot Garden
+   </copyright>
+
+   <license url="http://www.apache.org/licenses/">
+      Carrot Garden
+   </license>
+
+   <plugin
+         id="com.carrotgarden.eclipse.space.plugin"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

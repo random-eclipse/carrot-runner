@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.carrotgarden.eclipse.space.plugin">
+
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="com.carrotgarden.eclipse.space.Plugin"></startup>
+   </extension>
+
+<!--
+   <extension point="org.eclipse.ui.console.consoleFactories">
+      <consoleFactory label="Space Master" icon="image/logo-16x16.png"
+            class="com.carrotgarden.eclipse.space.console.RunnerConsoleFactory"/>
+   </extension>
+   <extension point="org.eclipse.ui.console.consolePageParticipants">
+      <consolePageParticipant
+            class="com.carrotgarden.eclipse.space.console.RunnerConsolePageParticipant"
+            id="carrot.space.plugin.console.participant">
+      </consolePageParticipant>
+   </extension>
+-->
+
+	<extension
+	       point="org.eclipse.core.expressions.definitions">
+	    <definition id="carrot.space.plugin.enablement">
+	          <adapt type="org.eclipse.core.resources.IResource">
+   				<test forcePluginActivation="true"
+   				   property="org.eclipse.core.resources.projectNature" 
+   				   value="com.carrotgarden.eclipse.space.nature" />
+	          </adapt>
+	    </definition>
+	</extension>
+
+   <extension
+         point="org.eclipse.ui.menus">
+         
+	
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer?before=additions">
+         <menu
+               icon="image/logo-16x16.png"
+               label="Space Master">
+            <dynamic
+                  class="com.carrotgarden.eclipse.space.menu.RunnerMenuList"
+                  id="carrot.space.plugin.menu">
+            </dynamic>
+         </menu>
+      </menuContribution>
+
+        
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.carrotgarden.eclipse.space.pref.MainPage"
+            id="carrot.space.plugin.preference"
+            name="Space Master">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.carrotgarden.eclipse.space.pref.Initializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="carrot.space.plugin.command"
+            name="Space Command">
+      </command>
+   </extension>
+
+</plugin>

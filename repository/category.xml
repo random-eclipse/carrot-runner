@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.carrotgarden.eclipse.space.feature_1.1.0.qualifier.jar" id="com.carrotgarden.eclipse.space.feature" version="1.1.0.qualifier">
+      <category name="Carrot Garden"/>
+   </feature>
+   <category-def name="Carrot Garden" label="Carrot Garden">
+      <description>
+         Space Master
+      </description>
+   </category-def>
+</site>
